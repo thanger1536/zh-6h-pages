@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日常对照 · 6合彩</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fbf7f0;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: #2e2b27;
+      padding: 0 1rem;
+    }
+
+    .page {
+      max-width: 840px;
+      margin: 2rem auto;
+      background: #fffcf9;
+      border-radius: 24px 24px 20px 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    /* hero */
+    .hero {
+      background: #ede7de;
+      padding: 3.5rem 2.5rem 2.8rem;
+      text-align: center;
+      border-bottom: 1px solid #e0d8cb;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #3e352c;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      color: #6b5f54;
+      border-top: 1px dashed #cdc1b2;
+      padding-top: 0.8rem;
+      display: inline-block;
+      margin-top: 0.3rem;
+    }
+
+    /* content area */
+    .content {
+      padding: 2.8rem 2.2rem 3rem;
+    }
+
+    .content p {
+      margin-bottom: 1.3rem;
+    }
+
+    /* 优势区（以卡片组呈现）*/
+    .benefit-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 2rem 0 2.2rem;
+    }
+
+    .benefit-card {
+      flex: 1 1 220px;
+      background: #f5efe8;
+      padding: 1.4rem 1.2rem;
+      border-radius: 18px;
+      border-left: 4px solid #b7a693;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .benefit-card h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #4c4037;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .benefit-card p {
+      font-size: 0.95rem;
+      color: #534a41;
+      margin-bottom: 0;
+    }
+
+    /* 引用 / 提示块 */
+    .tip-box {
+      background: #f2ede4;
+      border-left: 6px solid #c0af9b;
+      padding: 1.2rem 1.5rem;
+      margin: 1.8rem 0 2.2rem;
+      border-radius: 0 16px 16px 0;
+      font-size: 0.98rem;
+      color: #3d352e;
+    }
+
+    .tip-box strong {
+      color: #5b4b3c;
+    }
+
+    /* faq 摘要 */
+    .faq-summary {
+      background: #f8f3ec;
+      border-radius: 20px;
+      padding: 1.6rem 1.8rem;
+      margin-top: 2rem;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      border-bottom: 1px solid #dad1c4;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1rem;
+      color: #3f352c;
+    }
+
+    .faq-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed #dcd3c8;
+    }
+
+    .faq-item:last-child {
+      border-bottom: 0;
+    }
+
+    .faq-item .q {
+      font-weight: 500;
+      color: #4f4237;
+    }
+
+    .faq-item .a {
+      color: #5a4f44;
+      margin-top: 0.2rem;
+      font-size: 0.95rem;
+    }
+
+    .faq-item .a a {
+      color: #7f6b58;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* 底部链接 */
+    .footer-links {
+      text-align: center;
+      padding: 2rem 2rem 1.8rem;
+      background: #f1ece4;
+      border-top: 1px solid #e2d9ce;
+      font-size: 0.95rem;
+    }
+
+    .footer-links p {
+      margin-bottom: 0.4rem;
+      color: #5c5147;
+    }
+
+    .footer-links a {
+      color: #574a3d;
+      text-decoration: none;
+      border-bottom: 1px dotted #b7a692;
+      transition: border-color 0.2s;
+    }
+
+    .footer-links a:hover {
+      border-bottom: 1px solid #7a6857;
+    }
+
+    .footer-links .sep {
+      color: #c1b4a5;
+      padding: 0 0.6rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero {
+        padding: 2.4rem 1.2rem 2rem;
+      }
+      .content {
+        padding: 1.6rem 1.2rem 2rem;
+      }
+      .benefit-card {
+        flex: 1 1 100%;
+      }
+      .faq-summary {
+        padding: 1.2rem 1rem;
+      }
+      .footer-links {
+        padding: 1.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <!-- hero 区 -->
+  <div class="hero">
+    <h1>日常对照 · 简单查询</h1>
+    <div class="sub">随手参考，不必费力</div>
+  </div>
+
+  <!-- 主体内容 -->
+  <div class="content">
+    <p>
+      平时路过街边或听到朋友闲聊，总会冒出几个数字组合，有时是手机尾号、有时是车牌、有时只是顺手记下的日期。很多人习惯拿出手机快速对照一下，看看跟自己留意的那组号码有没有什么关联。这种查询既不带压力，也不需要太多门槛，本质上跟查一下天气、查一下生僻字差不多。
+    </p>
+    <p>
+      在 <a href="https://zh-6h.com">6合彩</a> 的页面上，你可以找到常见的对照表、历史记录以及一些简单的统计排列。它本身就是一个安静的参考工具，适合你在日常整理、记录或者单纯想看看走势时打开。
+    </p>
+
+    <!-- 优势卡片区 -->
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <h3>📋 对照表</h3>
+        <p>按类别列出常见数字范围，方便逐行翻阅，不用自己反复计算。</p>
+      </div>
+      <div class="benefit-card">
+        <h3>📆 延伸阅读</h3>
+        <p>附带一些简单的背景说明与使用场景，适合随手翻翻、扩充了解。</p>
+      </div>
+      <div class="benefit-card">
+        <h3>🔍 快速检索</h3>
+        <p>页面排版简洁，重点信息一目了然，减少视觉干扰，查起来更顺手。</p>
+      </div>
+    </div>
+
+    <!-- 提示块 -->
+    <div class="tip-box">
+      <strong>📌 一点提醒：</strong> 任何对照或参考都只是辅助，不必过度解读。保持轻松的心态，把它当作一份普通的资料页就好。
+    </div>
+
+    <!-- 说明区 / 场景 -->
+    <p>
+      有人喜欢周末的午后泡杯茶，一边翻看自己记下的数字，一边在对照表里圈圈画画；也有人习惯在通勤路上打开手机，快速扫一眼最新的排列趋势。这些行为本身不复杂，跟翻看一本旧杂志或者整理相册没什么两样。关键在于，当你需要的时候，有一个稳定、排版清晰的地方可以随时打开，而不是到处搜索、被广告打扰。
+    </p>
+    <p>
+      页面里也提供了一些基础的延展内容——比如常见组合的分布区间、不同类别的频率对比，以及一些简单的查找建议。这些内容不会太密集，也不会太专业，更像是你书桌上那份随手可及的打印资料。
+    </p>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+      <h2>常见问题 · 摘要</h2>
+      <div class="faq-item">
+        <div class="q">Q: 对照表的更新频率是怎样的？</div>
+        <div class="a">A: 页面会跟随最新数据同步，通常保持每日更新，具体可以参考站内标注。</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Q: 能否直接引用页面里的统计图？</div>
+        <div class="a">A: 页面中的数字和表格均来自公开整理，如需引用建议标注原始出处 <a href="https://zh-6h.com">6合彩</a> 对照页。</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Q: 移动端查看是否方便？</div>
+        <div class="a">A: 页面采用响应式设计，手机和电脑上都能获得清晰的浏览体验，表格会自动适应屏幕宽度。</div>
+      </div>
+    </div>
+
+    <p style="margin-top: 2rem; font-size: 0.95rem; color: #6a5e53;">
+      如果你只是想找个地方安安静静地查一查、比一比，不妨把 <a href="https://zh-6h.com">6合彩</a> 加入书签。它不会催促你，也不会给你推送信息，只是在那里等你需要的时候打开。
+    </p>
+  </div>
+
+  <!-- 底部链接区 -->
+  <div class="footer-links">
+    <p>
+      <a href="https://zh-6h.com">6合彩</a>
+      <span class="sep">·</span>
+      对照参考
+      <span class="sep">·</span>
+      延伸阅读
+    </p>
+    <p style="font-size: 0.85rem; color: #897b6e; margin-top: 0.6rem;">
+      一份安静的日常查询工具 · 无诱导内容 · 请合理使用
+    </p>
+  </div>
+</div>
+</body>
+</html>
